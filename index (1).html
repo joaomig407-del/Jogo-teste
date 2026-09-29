@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arena FPS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game"></div>
+
+<div id="hud" class="hidden">
+  <div id="topbar">
+    <span>ONDA <b id="waveNum">1</b></span>
+    <span>INIMIGOS <b id="enemiesLeft">0</b></span>
+    <span>PONTOS <b id="score">0</b></span>
+  </div>
+  <div id="health"><div id="hpFill"></div><span id="hpText">100</span></div>
+  <div id="ammo">12 / 96</div>
+  <div id="crosshair"><i></i><i></i><i></i><i></i><b id="hitmarker"></b></div>
+  <div id="hurt"></div>
+  <div id="banner"></div>
+  <div id="countdown" class="hidden">3</div>
+</div>
+
+<div id="menu" class="overlay">
+  <h1>ARENA FPS</h1>
+  <p>Sobreviva a 5 ondas de inimigos.</p>
+  <div class="controls">
+    <div><kbd>W A S D</kbd> movimentar</div>
+    <div><kbd>Mouse</kbd> olhar</div>
+    <div><kbd>Clique esquerdo</kbd> atirar</div>
+    <div><kbd>R</kbd> recarregar</div>
+    <div><kbd>Shift</kbd> correr</div>
+    <div><kbd>ESC</kbd> liberar o mouse</div>
+  </div>
+  <button id="btnPlay">JOGAR</button>
+</div>
+
+<div id="pause" class="overlay hidden">
+  <h2>PAUSADO</h2>
+  <p>Clique para continuar</p>
+</div>
+
+<div id="over" class="overlay hidden">
+  <h1 class="red">GAME OVER</h1>
+  <p>Você chegou à onda <b id="finalWave">1</b> com <b id="finalScore">0</b> pontos.</p>
+  <button id="btnAgain">JOGAR NOVAMENTE</button>
+</div>
+
+<div id="win" class="overlay hidden">
+  <h1 class="green">VITÓRIA!</h1>
+  <p>Você venceu todas as ondas com <b id="winScore">0</b> pontos.</p>
+  <button id="btnAgain2">JOGAR NOVAMENTE</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
